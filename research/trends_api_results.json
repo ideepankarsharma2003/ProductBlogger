@@ -1,0 +1,41 @@
+{
+    "version": "0.1.20240514",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0 sec.",
+    "cost": 0,
+    "tasks_count": 1,
+    "tasks_error": 1,
+    "tasks": [
+        {
+            "id": "06060953-6493-0173-0000-73b2b492a01b",
+            "status_code": 50401,
+            "status_message": "Internal Error - Timeout.",
+            "time": "0 sec.",
+            "cost": 0,
+            "result_count": 0,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google_trends",
+                "explore",
+                "live"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "explore",
+                "se": "google_trends",
+                "location_name": "United States",
+                "date_from": "2019-01-01",
+                "date_to": "2024-06-06",
+                "keywords": [
+                    "best headphones"
+                ],
+                "item_types": [
+                    "google_trends_topics_list"
+                ]
+            },
+            "result": null
+        }
+    ]
+}

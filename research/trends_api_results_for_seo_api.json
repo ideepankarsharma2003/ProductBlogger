@@ -1,0 +1,101 @@
+{
+    "version": "0.1.20240514",
+    "status_code": 20000,
+    "status_message": "Ok.",
+    "time": "0.0870 sec.",
+    "cost": 0.00675,
+    "tasks_count": 3,
+    "tasks_error": 0,
+    "tasks": [
+        {
+            "id": "06060826-6493-0170-0000-0132410a0a6d",
+            "status_code": 20100,
+            "status_message": "Task Created.",
+            "time": "0.0047 sec.",
+            "cost": 0.00225,
+            "result_count": 0,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google_trends",
+                "explore",
+                "task_post"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "explore",
+                "se": "google_trends",
+                "location_name": "United States",
+                "date_from": "2019-01-01",
+                "date_to": "2020-01-01",
+                "keywords": [
+                    "seo api"
+                ]
+            },
+            "result": null
+        },
+        {
+            "id": "06060826-6493-0170-0000-744bf171c4cc",
+            "status_code": 20100,
+            "status_message": "Task Created.",
+            "time": "0.0066 sec.",
+            "cost": 0.00225,
+            "result_count": 0,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google_trends",
+                "explore",
+                "task_post"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "explore",
+                "se": "google_trends",
+                "location_name": "United States",
+                "date_from": "2019-01-01",
+                "date_to": "2020-01-01",
+                "type": "youtube",
+                "category_code": 3,
+                "keywords": [
+                    "seo api",
+                    "rank api"
+                ],
+                "tag": "some_string_123",
+                "pingback_url": "https://your-server.com/pingscript?id=$id&post_id=$post_id"
+            },
+            "result": null
+        },
+        {
+            "id": "06060826-6493-0170-0000-d5bc85bb5673",
+            "status_code": 20100,
+            "status_message": "Task Created.",
+            "time": "0.0074 sec.",
+            "cost": 0.00225,
+            "result_count": 0,
+            "path": [
+                "v3",
+                "keywords_data",
+                "google_trends",
+                "explore",
+                "task_post"
+            ],
+            "data": {
+                "api": "keywords_data",
+                "function": "explore",
+                "se": "google_trends",
+                "location_name": "United States",
+                "date_from": "2019-01-01",
+                "date_to": "2020-01-01",
+                "type": "youtube",
+                "category_code": 3,
+                "keywords": [
+                    "seo api",
+                    "rank api"
+                ],
+                "postback_url": "https://your-server.com/postbackscript"
+            },
+            "result": null
+        }
+    ]
+}
