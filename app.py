@@ -24,7 +24,7 @@ if write_blog_button and keyword:
     print(f"products: {products}")
     if products:
         for product in products:
-            response_stream = create_streaming_blog(product)
+            response_stream = create_streaming_blog(product, keyword)
             # Iterate through the response stream
             for response in response_stream:
                 # Append the new content to the full response

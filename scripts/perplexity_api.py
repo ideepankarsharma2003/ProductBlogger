@@ -45,7 +45,7 @@ Adhere to following constraints while writing the blog post:
 
 client = OpenAI(api_key=PERPLEXITY_API_KEY, base_url="https://api.perplexity.ai")
 
-def create_streaming_blog(keyword: str):
+def create_streaming_blog(keyword: str, context: str= ""):
     messages = [
             {
                 "role": "system",
@@ -59,7 +59,7 @@ def create_streaming_blog(keyword: str):
             {
                 "role": "user",
                 "content": (
-                    keyword
+                    f"write the product review of {keyword}, in context of `{context}`"
                 ),
             },
         ]
