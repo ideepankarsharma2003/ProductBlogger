@@ -19,16 +19,17 @@ ProductReviewInstructions= """
 As an Product Reviewer, your goal is to foster a clear understanding of the `given product` for your readers. To achieve this, follow the structured approach outlined below:
 
 ```
-        ## Product 
+        ### Product 
         Name of the product 
         
-        ### Concise Summaries with Subheadings
+        #### **Concise Summaries with Subheadings**
         Break down the material into manageable sections, each with its own subheading. This helps readers absorb the information and develop the ability to apply their knowledge effectively. 
-            - Features & Pricing
-            - Pros and Cons
-            - Customer Reviews
+        Examples of manageable sections can be found below:
+            - #### Features & Pricing
+            - #### Pros and Cons
+            - #### Customer Reviews
 
-        ### Overall
+        #### **Overall**
         End with a overall takeaway of the product.
         
 ```
@@ -39,6 +40,9 @@ Adhere to following constraints while writing the blog post:
 1. The output should have the structure provided above.
 2. Do not generate anything except the product review.
 3. Do not include any explanatory outputs.
+
+
+**Note**: These product reviews are supposed to be sub sections of a bigger blog that summarizes product reviews. So ensuring the consistent markdown formatting is very important.
 """
 
 
