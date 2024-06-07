@@ -11,7 +11,7 @@ SCRAPPER_API_AMAZON_SEARCH_URL= os.environ.get('SCRAPPER_API_AMAZON_SEARCH_URL')
 SCRAPPER_API_AMAZON_REVIEW_URL= os.environ.get('SCRAPPER_API_AMAZON_REVIEW_URL')
 
 
-def get_ranking_products(search_query: str, num_results: int=5):
+def get_ranking_products_sorted_top_reviews(search_query: str, num_results: int=5):
     payload = {
         'api_key': SCRAPPER_API_KEY, #add your API key here
         'query': search_query,
@@ -27,6 +27,37 @@ def get_ranking_products(search_query: str, num_results: int=5):
             listed_results= search_results['results']
             # sorting results based on their reviews
             listed_results.sort(key= lambda x: x.get('total_reviews', 0), reverse=True)
+            results= listed_results[:num_results]
+                
+        else:
+            raise(f"Response from SCRAPPER: {response.status_code}")
+
+    except Exception as e:
+        print(e)
+        error= e.__str__()
+    finally:
+        result= {
+            'results':results,
+            'error': error
+        }
+        return result
+    
+    
+
+def get_ranking_products(search_query: str, num_results: int=5):
+    payload = {
+        'api_key': SCRAPPER_API_KEY, #add your API key here
+        'query': search_query,
+        'country': 'us'
+    }
+    results= []
+    error=None
+    try:
+        response = requests.get(SCRAPPER_API_AMAZON_SEARCH_URL, params=payload)
+        if response.ok:
+            search_results= response.json()
+            listed_results= search_results['results']
+            listed_results.sort(key= lambda x: x.get('position', 0))
             results= listed_results[:num_results]
                 
         else:
